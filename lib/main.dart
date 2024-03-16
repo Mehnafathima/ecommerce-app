@@ -1,4 +1,6 @@
 import 'package:ecommerce_app/constants/global_variables.dart';
+import 'package:ecommerce_app/features/auth/screens/auth_screen.dart';
+import 'package:ecommerce_app/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,14 +24,8 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('hello'),
-        ),
-        body: const Center(
-          child: Text("ycuyghuygu"),
-        ),
-      ),
+      onGenerateRoute:(settings) => generateRoute(settings),
+      home:  const AuthScreen()
     );
   }
 }
