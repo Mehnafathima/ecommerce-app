@@ -53,26 +53,26 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Scaffold(
-        backgroundColor: GlobalVaribales.greyBackgroundCOlor,
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 255, 254, 200),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // const SizedBox(height: 50),
-      
+                const SizedBox(height: 50),
+                
                 // logo
                 const Icon(
                   Icons.shopping_cart_sharp,
                   color: GlobalVaribales.secondaryColor,
                   size: 100,
                 ),
-      
-                // const SizedBox(height: 25),
-      
+                
+                const SizedBox(height: 25),
+                
                // welcome back, you've been missed!
                 Text(
                   'Welcome back you\'ve been missed!',
@@ -81,8 +81,8 @@ class _AuthScreenState extends State<AuthScreen> {
                     fontSize: 16,
                   ),
                 ),
-                const SizedBox(height: 50),
-      
+                const SizedBox(height: 10),
+                
                 ListTile(
                   tileColor: _auth == Auth.signup
                       ? GlobalVaribales.backgroundColor
